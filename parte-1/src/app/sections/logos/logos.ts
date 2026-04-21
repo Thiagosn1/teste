@@ -9,7 +9,7 @@ interface BrandLogo {
   selector: 'landing-logos',
   standalone: true,
   templateUrl: './logos.html',
-  styleUrl: './logos.css'
+  styleUrls: ['./logos.css']
 })
 export class LandingLogosComponent {
   protected readonly logos: BrandLogo[] = [

@@ -14,6 +14,6 @@ import { LandingServicesComponent } from './sections/services/services';
     LandingServicesComponent
   ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {}

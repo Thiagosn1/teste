@@ -1,0 +1,58 @@
+<section class="services" id="services">
+  <div class="services-head">
+    <h2>Services</h2>
+    <p>
+      At our digital marketing agency, we offer a range of services to help
+      businesses grow and succeed online. These services include:
+    </p>
+  </div>
+
+  <div class="services-grid">
+    @for (card of cards; track card.image) {
+      <article class="service-card" [class.dark]="card.theme === 'dark'" [class.green]="card.theme === 'green'">
+        <div class="heading-link" [style.width.px]="card.contentWidth">
+          <div class="service-title" [style.width.px]="card.headingWidth">
+            @for (line of card.titleLines; let i = $index; track line) {
+              <span [class.white-label]="card.labelTone === 'white'" [style.width.px]="card.labelWidths[i]">{{ line }}</span>
+            }
+          </div>
+
+          <a href="#" class="learn-more" aria-label="Learn more about {{ card.titleLines.join(' ') }}">
+            <img
+              class="arrow"
+              [src]="card.theme === 'dark' ? '/images/arrow_black.svg' : '/images/arrow_green-2.svg'"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>Learn more</span>
+          </a>
+        </div>
+
+        <img
+          class="service-illustration"
+          [class.flip-x]="card.flipX"
+          [src]="card.image"
+          [style.height.px]="card.illustrationHeight"
+          alt=""
+          aria-hidden="true"
+        />
+      </article>
+    }
+  </div>
+
+  <aside class="services-cta">
+    <div class="services-cta-copy">
+      <h3>Let’s make things happen</h3>
+      <p>
+        Contact us today to learn more about how our digital
+        marketing services can help your business grow and
+        succeed online.
+      </p>
+      <button type="button" class="cta-btn">Get your free proposal</button>
+    </div>
+
+    <div class="services-cta-frame" aria-hidden="true">
+      <img class="services-cta-art" src="/images/services-7.svg" alt="" />
+    </div>
+  </aside>
+</section>

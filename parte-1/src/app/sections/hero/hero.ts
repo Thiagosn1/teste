@@ -5,7 +5,7 @@ import { HERO_CONTENT } from '../../content/landing-content';
   selector: 'landing-hero',
   standalone: true,
   templateUrl: './hero.html',
-  styleUrl: './hero.css'
+  styleUrls: ['./hero.css']
 })
 export class LandingHeroComponent {
   protected readonly content = HERO_CONTENT;

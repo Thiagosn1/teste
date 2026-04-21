@@ -5,7 +5,7 @@ import { NAV_LINKS } from '../../content/landing-content';
   selector: 'landing-navbar',
   standalone: true,
   templateUrl: './navbar.html',
-  styleUrl: './navbar.css'
+  styleUrls: ['./navbar.css']
 })
 export class LandingNavbarComponent {
   protected readonly links = NAV_LINKS;
