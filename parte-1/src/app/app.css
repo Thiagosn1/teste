@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 0;
+}
+
+.landing {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  background: var(--bg);
+  padding: 60px 100px 66px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.section-anchor {
+  height: 0;
+}
+
+@media (max-width: 1024px) {
+  .landing {
+    padding: 42px 52px 52px;
+    gap: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing {
+    padding: 32px 24px 40px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing {
+    padding: 20px 16px 28px;
+    gap: 28px;
+  }
+}

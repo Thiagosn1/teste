@@ -1,0 +1,5 @@
+<section class="brands" aria-label="Our partners">
+  @for (logo of logos; track logo.src) {
+    <img [src]="logo.src" [alt]="logo.alt" />
+  }
+</section>

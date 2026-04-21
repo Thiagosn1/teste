@@ -1,12 +1,19 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { LandingHeroComponent } from './sections/hero/hero';
+import { LandingLogosComponent } from './sections/logos/logos';
+import { LandingNavbarComponent } from './sections/navbar/navbar';
+import { LandingServicesComponent } from './sections/services/services';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [
+    LandingNavbarComponent,
+    LandingHeroComponent,
+    LandingLogosComponent,
+    LandingServicesComponent
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('parte-1');
-}
+export class App {}

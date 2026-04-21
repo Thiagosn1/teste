@@ -1,0 +1,12 @@
+<nav class="nav">
+  <a class="logo" href="#" aria-label="Positivus home">
+    <img class="logo-image" src="/images/logo.svg" alt="Positivus" />
+  </a>
+
+  <div class="nav-links">
+    @for (link of links; track link.label) {
+      <a [href]="link.href">{{ link.label }}</a>
+    }
+    <button type="button" class="btn btn-outline">Request a quote</button>
+  </div>
+</nav>
