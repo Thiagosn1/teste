@@ -32,6 +32,7 @@
 
 .services-grid {
   width: 100%;
+  margin-top: 37px;
   display: grid;
   grid-template-columns: 600px 600px;
   justify-content: space-between;
@@ -133,7 +134,7 @@
 }
 
 .services-cta {
-  margin-top: 35px;
+  margin-top: 91px;
   width: min(100%, 1240px);
   height: 347px;
   background: #f3f3f3;
@@ -201,9 +202,9 @@
 
 .services-cta-art {
   position: absolute;
-  top: -25px;
+  top: -26px;
   width: 359px;
-  height: 394.27px;
+  height: 394px;
   display: block;
   object-fit: contain;
   transform: none;
@@ -228,6 +229,7 @@
   }
 
   .services-grid {
+    margin-top: 0;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 24px;
     row-gap: 24px;
