@@ -134,7 +134,7 @@
 
 .services-cta {
   margin-top: 35px;
-  width: 100%;
+  width: min(100%, 1240px);
   height: 347px;
   background: #f3f3f3;
   border-radius: 45px;
@@ -142,7 +142,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 140px;
+  gap: 167px;
   overflow: visible;
 }
 
@@ -157,13 +157,12 @@
 }
 
 .services-cta-frame {
-  width: 494px;
-  height: 394px;
+  width: 359px;
+  height: 347px;
   position: relative;
   flex: none;
   overflow: visible;
-  margin-left: auto;
-  margin-right: -28px;
+  align-self: flex-end;
 }
 
 .services-cta-copy h3 {
@@ -202,8 +201,7 @@
 
 .services-cta-art {
   position: absolute;
-  left: 0;
-  top: 0;
+  top: -25px;
   width: 359px;
   height: 394.27px;
   display: block;
@@ -274,54 +272,56 @@
 
   .services-cta {
     margin-top: 16px;
-    height: 320px;
-    border-radius: 36px;
-    padding: 24px 34px;
-    gap: 32px;
+    height: 347px;
+    border-radius: 45px;
+    padding: 0 48px;
+    gap: clamp(40px, 6vw, 90px);
   }
 
   .services-cta-copy {
-    width: 100%;
-    max-width: 460px;
-    height: auto;
+    width: min(500px, 52%);
+    height: 227px;
     gap: 20px;
   }
 
   .services-cta-copy h3 {
     width: auto;
-    height: auto;
-    font-size: 28px;
-    line-height: 1.25;
+    height: 38px;
+    font-size: 30px;
+    line-height: 38px;
   }
 
   .services-cta-copy p {
     width: auto;
-    min-height: 0;
-    font-size: 16px;
-    line-height: 1.4;
+    min-height: 69px;
+    font-size: 18px;
+    line-height: 23px;
   }
 
   .cta-btn {
-    width: auto;
-    font-size: 18px;
-    line-height: 24px;
-    padding: 16px 24px;
+    width: 288px;
+    height: 68px;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 20px 35px;
   }
 
   .services-cta-frame {
-    width: 280px;
-    height: 300px;
+    width: min(330px, 40%);
+    height: 347px;
     margin-left: auto;
-    margin-right: -14px;
+    margin-right: -8px;
+    margin-bottom: 0;
+    align-self: flex-end;
   }
 
   .services-cta-art {
-    width: 280px;
-    height: 300px;
+    width: 100%;
+    height: 363px;
     position: absolute;
     left: 0;
     top: 0;
-    transform: translateY(8px);
+    transform: none;
   }
 }
 
@@ -386,10 +386,11 @@
 
   .services-cta-frame {
     width: 240px;
-    height: 250px;
+    height: 210px;
     align-self: flex-end;
     margin-left: auto;
     margin-right: -10px;
+    margin-bottom: 0;
   }
 
   .services-cta-art {
@@ -398,7 +399,7 @@
     height: 250px;
     left: 0;
     top: 0;
-    transform: translateY(6px);
+    transform: none;
   }
 }
 
@@ -468,9 +469,10 @@
 
   .services-cta-frame {
     width: 200px;
-    height: 210px;
+    height: 176px;
     margin-left: auto;
     margin-right: -6px;
+    margin-bottom: 0;
   }
 
   .services-cta-art {
@@ -479,6 +481,6 @@
     height: 210px;
     left: 0;
     top: 0;
-    transform: translateY(4px);
+    transform: none;
   }
 }

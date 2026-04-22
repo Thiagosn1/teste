@@ -1,0 +1,21 @@
+<section class="case-studies" id="use-cases">
+  <header class="case-studies-head">
+    <h2>Case Studies</h2>
+    <p>
+      Explore Real-Life Examples of Our Proven Digital Marketing
+      Success through Our Case Studies
+    </p>
+  </header>
+
+  <div class="case-studies-grid">
+    @for (study of studies; track study.description) {
+      <article class="case-study-card">
+        <p>{{ study.description }}</p>
+        <a href="#" class="learn-more" aria-label="Learn more about this case study">
+          <span>Learn more</span>
+          <span class="arrow-icon" aria-hidden="true"></span>
+        </a>
+      </article>
+    }
+  </div>
+</section>
