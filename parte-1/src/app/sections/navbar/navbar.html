@@ -9,4 +9,34 @@
     }
     <button type="button" class="btn btn-outline">Request a quote</button>
   </div>
+
+  <button
+    type="button"
+    class="menu-toggle"
+    aria-label="Open navigation menu"
+    aria-controls="mobile-menu"
+    [attr.aria-expanded]="isMenuOpen"
+    (click)="toggleMenu()"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu-backdrop" [class.open]="isMenuOpen" (click)="closeMenu()"></div>
+
+<aside id="mobile-menu" class="mobile-menu-panel" [class.open]="isMenuOpen" aria-label="Mobile navigation">
+  <div class="mobile-menu-top">
+    <button type="button" class="menu-close" aria-label="Close navigation menu" (click)="closeMenu()">
+      <span class="menu-close-icon" aria-hidden="true">X</span>
+    </button>
+  </div>
+
+  <div class="mobile-nav-links">
+    @for (link of links; track link.label) {
+      <a [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
+    }
+    <button type="button" class="btn btn-outline" (click)="closeMenu()">Request a quote</button>
+  </div>
+</aside>

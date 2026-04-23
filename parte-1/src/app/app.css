@@ -18,33 +18,29 @@
   width: min(100%, 1440px);
   margin: 0 auto;
   background: var(--bg);
-  padding: 52px 100px 66px;
+  padding: 46px 77px;
   display: flex;
   flex-direction: column;
   gap: 62px;
 }
 
-.section-anchor {
-  height: 0;
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .landing {
-    padding: 42px 52px 52px;
-    gap: 52px;
+    padding: clamp(32px, 4vw, 42px) clamp(28px, 5vw, 52px);
+    gap: clamp(42px, 5vw, 52px);
   }
 }
 
 @media (max-width: 768px) {
   .landing {
-    padding: 32px 24px 40px;
+    padding: 40px 50px;
     gap: 40px;
   }
 }
 
 @media (max-width: 480px) {
   .landing {
-    padding: 20px 16px 28px;
+    padding: 20px 16px;
     gap: 28px;
   }
 }
