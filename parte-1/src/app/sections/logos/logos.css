@@ -20,6 +20,14 @@
   flex: none;
 }
 
+.brands-mobile {
+  display: none;
+}
+
+.brands-desktop-carousel {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .brands {
     align-items: center;
@@ -33,7 +41,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .brands {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -49,20 +57,103 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 768px) {
   .brands {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    justify-items: center;
-    align-items: center;
-    gap: 14px 12px;
+    display: none;
   }
 
-  .brands img {
+  .brands-mobile {
+    display: none;
+  }
+
+  .brands-desktop-carousel {
+    width: 100%;
+    min-height: 48px;
+    display: block;
+    overflow: hidden;
+  }
+
+  .brands-desktop-track {
+    display: flex;
+    align-items: center;
+    gap: clamp(28px, 3.6vw, 56px);
+    width: max-content;
+    animation: logo-marquee 12s linear infinite;
+    will-change: transform;
+  }
+
+  .brands-desktop-track img {
+    height: 48px;
     width: auto;
-    height: 26px;
-    max-height: 28px;
+    display: block;
     object-fit: contain;
+    mix-blend-mode: luminosity;
+    filter: grayscale(100%);
+    flex: none;
   }
 }
 
+@media (max-width: 480px) {
+  .brands {
+    display: none;
+  }
+
+  .brands-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .brands-row {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .brands-track {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    width: max-content;
+    animation: logo-marquee 10s linear infinite;
+    will-change: transform;
+  }
+
+  .brands-track-slow {
+    animation: logo-marquee-reverse 10s linear infinite;
+  }
+
+  .brands-track-linked {
+    animation-delay: -5s;
+  }
+
+  .brands-track img {
+    width: auto;
+    height: 36px;
+    max-height: 38px;
+    object-fit: contain;
+    flex: none;
+    mix-blend-mode: luminosity;
+    filter: grayscale(100%);
+  }
+}
+
+@keyframes logo-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes logo-marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

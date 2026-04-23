@@ -390,6 +390,8 @@
   }
 
   .services-cta-copy {
+    width: 100%;
+    height: auto;
     max-width: 100%;
     gap: 28px;
     align-items: center;
@@ -440,6 +442,16 @@
     border-radius: 28px;
     padding: 18px;
     gap: 12px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto;
+    align-items: stretch;
+  }
+
+  .heading-link {
+    grid-column: 1;
+    height: 100%;
+    justify-content: space-between;
   }
 
   .service-title span {
@@ -460,32 +472,44 @@
   }
 
   .service-illustration {
-    width: 112px;
+    grid-column: 2;
+    align-self: end;
+    justify-self: end;
+    margin-left: auto;
+    width: 130px;
   }
 
   .services-cta {
-    margin-top: 6px;
+    margin-top: 10px;
+    min-height: 340px;
     height: auto;
     border-radius: 24px;
-    padding: 18px;
-    gap: 22px;
+    padding: 28px 20px;
+    gap: 18px;
+    justify-content: center;
   }
 
   .services-cta-copy h3 {
     font-size: 24px;
+    line-height: 1.2;
+    max-width: 260px;
   }
 
   .services-cta-copy {
-    gap: 22px;
+    max-width: 320px;
+    margin-inline: auto;
+    gap: 18px;
+    justify-content: space-between;
   }
 
   .services-cta-copy p {
+    max-width: 300px;
     font-size: 15px;
     line-height: 1.4;
   }
 
   .cta-btn {
-    width: 100%;
+    width: min(100%, 260px);
     height: auto;
     font-size: 16px;
     line-height: 22px;
@@ -494,20 +518,10 @@
   }
 
   .services-cta-frame {
-    width: 230px;
-    height: 202px;
-    margin-inline: auto;
-    margin-top: 32px;
-    margin-bottom: 0;
-    align-self: center;
+    display: none;
   }
 
   .services-cta-art {
-    position: absolute;
-    width: 230px;
-    height: 242px;
-    left: 0;
-    top: 0;
-    transform: none;
+    display: none;
   }
 }

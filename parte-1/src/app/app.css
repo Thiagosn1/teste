@@ -40,7 +40,7 @@
 
 @media (max-width: 480px) {
   .landing {
-    padding: 20px 16px;
+    padding: 0px 20px;
     gap: 28px;
   }
 }

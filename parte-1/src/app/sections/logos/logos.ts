@@ -20,4 +20,6 @@ export class LandingLogosComponent {
     { alt: 'Netflix', src: '/images/logo_netflix.svg' },
     { alt: 'Zoom', src: '/images/logo_zoom.svg' }
   ];
+
+  protected readonly marqueeLoop: BrandLogo[] = [...this.logos, ...this.logos];
 }

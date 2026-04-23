@@ -271,8 +271,46 @@
   }
 
   .case-studies-grid {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    padding: 0 0 6px;
+    background: transparent;
+    border-radius: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .case-study-card {
+    flex: 0 0 86%;
+    min-width: 86%;
+    min-height: 0;
+    padding: 22px 18px;
+    gap: 14px;
     border-radius: 24px;
-    padding: 18px 44px;
+    background: var(--dark);
+    border-bottom: 0;
+    scroll-snap-align: start;
+  }
+
+  .case-study-card:not(:last-child) {
+    padding-right: 18px;
+  }
+
+  .case-study-card:not(:last-child)::after {
+    content: none;
+  }
+
+  .case-study-card p {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .learn-more {
+    align-self: flex-start;
+    justify-content: flex-start;
   }
 
   .learn-more {

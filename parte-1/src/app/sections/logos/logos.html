@@ -3,3 +3,29 @@
     <img [src]="logo.src" [alt]="logo.alt" />
   }
 </section>
+
+<section class="brands-desktop-carousel" aria-label="Our partners desktop marquee">
+  <div class="brands-desktop-track">
+    @for (logo of marqueeLoop; track $index) {
+      <img [src]="logo.src" [alt]="logo.alt" />
+    }
+  </div>
+</section>
+
+<section class="brands-mobile" aria-label="Our partners mobile marquee">
+  <div class="brands-row">
+    <div class="brands-track">
+      @for (logo of marqueeLoop; track $index) {
+        <img [src]="logo.src" [alt]="logo.alt" />
+      }
+    </div>
+  </div>
+
+  <div class="brands-row">
+    <div class="brands-track brands-track-slow brands-track-linked">
+      @for (logo of marqueeLoop; track $index) {
+        <img [src]="logo.src" [alt]="logo.alt" />
+      }
+    </div>
+  </div>
+</section>

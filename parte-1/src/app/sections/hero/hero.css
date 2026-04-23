@@ -68,6 +68,10 @@
   display: block;
 }
 
+.hero-art-mobile {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .hero {
     height: auto;
@@ -128,6 +132,7 @@
 
   .hero-copy p {
     max-width: 560px;
+    text-align: left;
   }
 
   .hero-art {
@@ -139,6 +144,19 @@
 }
 
 @media (max-width: 480px) {
+  .hero-art-mobile {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+    order: 0;
+  }
+
+  .hero > .hero-art {
+    display: none;
+  }
+
   .hero-copy h1 {
     font-size: 34px;
     line-height: 40px;
